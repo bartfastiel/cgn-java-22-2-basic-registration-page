@@ -37,7 +37,7 @@ function App() {
             <Register/>
         </>
     }
-    return <Secret authenticationChanged={fetchUsername}/>
+    return <Secret authenticationChanged={fetchUsername} username={username}/>
 }
 
 export default App;
