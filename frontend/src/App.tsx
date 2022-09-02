@@ -3,6 +3,7 @@ import './App.css';
 import Login from "./components/Login";
 import Secret from "./components/Secret";
 import axios from "axios";
+import Register from "./components/Register";
 
 
 function App() {
@@ -31,7 +32,10 @@ function App() {
         return <div>Loading...</div>
     }
     if (username === "anonymousUser") {
-        return <Login authenticationChanged={fetchUsername}/>
+        return <>
+            <Login authenticationChanged={fetchUsername}/>
+            <Register/>
+        </>
     }
     return <Secret authenticationChanged={fetchUsername}/>
 }
